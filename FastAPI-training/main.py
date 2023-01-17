@@ -47,6 +47,7 @@ def delete_post(post_id: str):
             return {"Post has been deleted"}
     raise HTTPException(status_code=400,detail="Post not found")
 
+#Deleting 
 @app.put('/posts/{post_id}')
 def update_post(post_id: str,updated_post:Post):
     for index, post in enumerate(posts):
